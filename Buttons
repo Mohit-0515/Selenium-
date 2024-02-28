@@ -1,0 +1,102 @@
+public boolean checkElementIsDisplayed(WebElement elem) {
+		boolean isDisplay = false;
+		
+		// TODO : Check whether button is isDisplayed or not.
+		boolean isDisplayed = elm.isDisplayed();
+		return isDisplayed;
+		
+		
+	}
+
+	/**
+	 * use this method to check button isEnabled or not
+	 */
+	public boolean checkElementIsEnabled(WebElement webElement) {
+		boolean isEnable = false;
+		boolean isEnabled = webElement.isEnabled();
+		
+		// TODO : Check whether button is isEnabled or not.
+		
+		return isEnabled;
+	}
+
+	/**
+	 * use this method to get the height and width of element
+	 */
+	public void getSizeOfElement(WebElement webElement) {
+		int height = 0;
+		int width = 0; 
+		WebElement web = driver.findElement(By.className("Button"));
+		height = web.getRect().getDimension().getHeight();
+		width = web.getRect().getDimension().getWidth();
+		
+		// TODO : Get the size of button
+		
+		System.out.println("height is : " +height);
+		System.out.println("width is : " +width);
+	}
+	
+	/**
+	 * use this method to get the height and width of element
+	 */
+	public void getPositionOfElement(WebElement webElement) {
+		int coordinateX = 0;
+		int coordinateY = 0; 
+		WebElement lc = driver.findElement(By.className("Button"))
+		coordinateX = lc.getLocation().getX();
+		coordinateY = lc.getLocation().getY();
+		// TODO : Get the position of button
+		
+		System.out.println("coordinate X is : " +coordinateX);
+		System.out.println("coordinate y is : " +coordinateY);
+	}
+	
+	/**
+	 * use this method to retrieve the label on button
+	 */
+	public String getTextOfElement(WebElement webElement) {
+		String label = null;
+		WebElement tx = driver.findElement(By.className("Button"));
+		label = tx.getText();
+		// TODO : Retrieve the text/label of the button.
+		
+		return label;
+	}
+
+	/**
+	 * use this method to retrieve the css value of button
+	 */
+	public String getColorOfElement(WebElement webElement) {
+		String color = null;
+		
+		color = webElement.getCssValue("color");
+		// TODO : Retrieve thcss value of "color"
+		
+		return color;
+	}
+
+	public String getAttributeValue(WebElement webElement) {
+		String attributeValue = null;
+		attributeValue = webElement.getAttributeValue("Button");
+		
+		// TODO : Retrieve class attribute value
+		
+		return attributeValue;
+	}
+	/**
+	 * use this method to perform click on button
+	 */
+	public void clickOnBtn(WebElement webElement) {
+
+		webElement.click();
+		
+		// TODO : Perform click operation on button
+	}
+
+	/**
+	 * use this method to close the current window of browser
+	 */
+	public void closeBrowser() {
+		System.out.println("Closing the browser window");
+		driver.close();
+	}
